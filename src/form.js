@@ -58,7 +58,7 @@ const myob = {
   marks: this.state.marks
 
 };
-axios.post('http://localhost:3200/students/addStudent',myob)
+axios.post("https://crud-backend.herokuapp.com/students/addStudent",myob)
 .then(err => console.log(err.data));
 this.setState({
   _id: '',

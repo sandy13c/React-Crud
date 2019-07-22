@@ -39,7 +39,7 @@ axios.get('http://localhost:3200/students/student_info/'+ this.props.match.param
 
   })
   */
-   axios.get( "http://localhost:3200/students")
+   axios.get( "https://crud-backend.herokuapp.com/students")
     .then((myJson) => {
       this.setState({student:myJson.data});
     })
@@ -92,7 +92,7 @@ const myobj = {
   marks: this.state.marks
 
 };
-axios.post('http://localhost:3200/students/updateStudent', myobj)
+axios.post('https://crud-backend.herokuapp.com/students/updateStudent', myobj)
 
 .then(res=> console.log(res.data));
   this.props.history.push('/getstudents');

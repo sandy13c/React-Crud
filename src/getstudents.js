@@ -17,7 +17,7 @@ class GetStudents extends React.Component {
 
  componentDidMount() {
    //console.log('===>Get student component mounted')
-    axios.get( "http://localhost:3200/students")
+    axios.get( "https://crud-backend.herokuapp.com/students")
      .then((myJson) => {
        this.setState({student:myJson.data});
      })
@@ -27,7 +27,7 @@ class GetStudents extends React.Component {
 
 getStudents () {
   //console.log('==>Getting students')
-  axios.get( "http://localhost:3200/students")
+  axios.get( "https://crud-backend.herokuapp.com/students")
    .then((myJson) => {
      this.setState({student:myJson.data});
    })
@@ -36,7 +36,7 @@ getStudents () {
 
 deleteStudent(studentId) {
 
-        axios.post('http://localhost:3200/students/deleteStudent', {
+        axios.post('https://crud-backend.herokuapp.com/students/deleteStudent', {
             '_id': studentId
         })
             .then(() => {
