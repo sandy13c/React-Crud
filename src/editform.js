@@ -96,6 +96,11 @@ axios.post('https://crud-backend.herokuapp.com/students/updateStudent', myobj)
 
 .then(res=> console.log(res.data));
   this.props.history.push('/getstudents');
+  axios.get( "https://crud-backend.herokuapp.com/students")
+    .then((myJson) => {
+      this.setState({student:myJson.data});
+     })
+    .catch(error => console.error(error));
 }
 
   render() {
